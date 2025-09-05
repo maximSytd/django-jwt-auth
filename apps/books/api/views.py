@@ -40,7 +40,11 @@ class MockBookView(GenericAPIView):
     permission_classes = [CanViewBooks]
 
     def get(self, request, *args, **kwargs):
-        """Return mocked data for tests."""
+        """
+        Return mocked data for tests.
+
+        Required can_view_books permission for user.
+        """
         serializer = self.get_serializer(data=FAKE_DB, many=True)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
