@@ -69,12 +69,12 @@ def issue_pair(
 ) -> TokensPair:
     """Return pair access plus refresh tokens and bulk create db instances."""
     access_claims = _base_claims(
-        user=User,
+        user=user,
         kind=Token.Kind.ACCESS,
         ttl=S["ACCESS_TTL"],
     )
     refresh_claims = _base_claims(
-        user=User,
+        user=user,
         kind=Token.Kind.REFRESH,
         ttl=S["REFRESH_TTL"],
     )
@@ -145,7 +145,7 @@ def decode_token(token: str) -> Payload:
         options={
             "verify_aud": False,
         },
-        issuer=S["ISSUER"],
+        issuer=S["ISSUSER"],
     )
 
 
@@ -170,7 +170,7 @@ def rotate_refresh(
     if claims.get("typ") != "refresh":
         raise jwt.InvalidTokenError(NOT_A_REFRESH_MESSAGE)
     try:
-        dbt = Token.objects.get(jti=claims.jti, kind=Token.Kind.REFRESH)
+        dbt = Token.objects.get(jti=claims["jti"], kind=Token.Kind.REFRESH)
     except Token.DoesNotExist:
         raise jwt.InvalidTokenError(UNKNOWN_REFRESH_MESSAGE)
 

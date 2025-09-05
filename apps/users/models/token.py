@@ -74,6 +74,8 @@ class Token(BaseModel):
                 ],
             ),
         ]
+        verbose_name = _("Token")
+        verbose_name_plural = _("Tokens")
 
     def is_active(self) -> bool:
         """Return boolean of is the token active."""
