@@ -1,0 +1,564 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-27 20:50+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: apps/core/admin/base_admin.py:20
+msgid "Extra info"
+msgstr ""
+
+#: apps/finances/apps.py:9
+msgid "Finances"
+msgstr "Финансы"
+
+#: apps/finances/filters/money_flow.py:24
+msgid "Min / Max"
+msgstr "Мин. / Макс."
+
+#: apps/finances/filters/money_flow.py:31
+msgid "Amount (range)"
+msgstr "Сумма (диапазон)"
+
+#: apps/finances/filters/money_flow.py:40 apps/finances/forms/money_flow.py:47
+#: apps/finances/models/money_flow.py:28
+msgid "Status"
+msgstr "Статус"
+
+#: apps/finances/filters/money_flow.py:62 apps/finances/forms/money_flow.py:59
+#: apps/finances/models/category.py:46 apps/finances/models/money_flow.py:34
+msgid "Category"
+msgstr "Категория"
+
+#: apps/finances/filters/money_flow.py:63
+#: templates/finances/money_flow/list.html:162
+msgid "Choose category"
+msgstr "Выберите категорию"
+
+#: apps/finances/filters/money_flow.py:72
+msgid "Search by category type"
+msgstr "Поиск по типу категории"
+
+#: apps/finances/filters/money_flow.py:75
+#: apps/finances/models/category_type.py:27
+msgid "Category type"
+msgstr "Тип категории"
+
+#: apps/finances/filters/money_flow.py:85
+msgid "Created date (range)"
+msgstr "Дата создания (диапазон)"
+
+#: apps/finances/forms/category.py:22
+msgid "Enter category name"
+msgstr "Введите название категории"
+
+#: apps/finances/forms/category.py:25 apps/finances/forms/category_type.py:21
+#: apps/finances/forms/money_flow_status.py:21
+#: apps/finances/models/category.py:13 apps/finances/models/category_type.py:11
+#: apps/finances/models/money_flow_status.py:11
+msgid "Title"
+msgstr "Название"
+
+#: apps/finances/forms/category.py:34
+msgid "Select parent category"
+msgstr "Выберите родительскую категорию"
+
+#: apps/finances/forms/category.py:37 apps/finances/models/category.py:21
+msgid "Parent category"
+msgstr "Родительская категория"
+
+#: apps/finances/forms/category.py:45
+msgid "Select category type"
+msgstr "Выберите тип категории"
+
+#: apps/finances/forms/category.py:48 apps/finances/models/category.py:27
+msgid "Type"
+msgstr "Тип"
+
+#: apps/finances/forms/category.py:64
+msgid "A category with this title already exists."
+msgstr "Категория с таким названием уже существует."
+
+#: apps/finances/forms/category_type.py:18
+msgid "Enter type name"
+msgstr "Введите название типа"
+
+#: apps/finances/forms/category_type.py:38
+msgid "A category type with this title already exists."
+msgstr "Тип категории с таким названием уже существует."
+
+#: apps/finances/forms/money_flow.py:27
+msgid "Enter amount in rubles"
+msgstr "Введите сумму в рублях"
+
+#: apps/finances/forms/money_flow.py:34
+msgid "Amount"
+msgstr "Сумма"
+
+#: apps/finances/forms/money_flow.py:44
+msgid "Select status"
+msgstr "Выберите статус"
+
+#: apps/finances/forms/money_flow.py:56
+msgid "Select category"
+msgstr "Выберите категорию"
+
+#: apps/finances/forms/money_flow.py:66
+msgid "Optional comment"
+msgstr "Необязательный комментарий"
+
+#: apps/finances/forms/money_flow.py:70 apps/finances/models/money_flow.py:40
+msgid "Comment"
+msgstr "Комментарий"
+
+#: apps/finances/forms/money_flow_status.py:18
+msgid "Enter status name"
+msgstr "Введите название статуса"
+
+#: apps/finances/forms/money_flow_status.py:38
+msgid "A status with this title already exists."
+msgstr "Статус с таким названием уже существует."
+
+#: apps/finances/models/category.py:33 apps/finances/models/category_type.py:17
+#: apps/finances/models/money_flow.py:46
+#: apps/finances/models/money_flow_status.py:17 apps/users/models/user.py:119
+msgid "User"
+msgstr "Пользователь"
+
+#: apps/finances/models/category.py:47 templates/finances/category/list.html:6
+#: templates/finances/category/list.html:15 templates/finances/settings.html:24
+msgid "Categories"
+msgstr "Категории"
+
+#: apps/finances/models/category_type.py:28
+msgid "Category types"
+msgstr "Типы категорий"
+
+#: apps/finances/models/money_flow.py:18
+msgid "Total sum"
+msgstr "Общая сумма"
+
+#: apps/finances/models/money_flow.py:49
+msgid "Created"
+msgstr "Создано"
+
+#: apps/finances/models/money_flow.py:56
+msgid "Money flow"
+msgstr "Денежный поток"
+
+#: apps/finances/models/money_flow.py:57
+msgid "Money flows"
+msgstr "Денежные потоки"
+
+#: apps/finances/models/money_flow_status.py:27
+msgid "Money flow status"
+msgstr "Статус денежного потока"
+
+#: apps/finances/models/money_flow_status.py:28
+msgid "Money flow statuses"
+msgstr "Статусы денежных потоков"
+
+#: apps/users/admin/user.py:62
+msgid "Personal info"
+msgstr "Персональная информация"
+
+#: apps/users/admin/user.py:72
+msgid "Permissions"
+msgstr "Права доступа"
+
+#: apps/users/api/auth/scheme.py:26
+msgid "Token-based authentication with required prefix `Token`"
+msgstr "Аутентификация по токену с обязательным префиксом `Token`"
+
+#: apps/users/api/auth/serializers.py:56
+msgid "Unable to log in with provided credentials."
+msgstr "Невозможно войти с предоставленными учетными данными."
+
+#: apps/users/api/auth/serializers.py:95
+msgid "There is no user with such email"
+msgstr "Пользователь с таким email не найден"
+
+#: apps/users/api/auth/serializers.py:137
+#: apps/users/api/auth/serializers.py:140
+msgid "Invalid uid"
+msgstr "Неверный uid"
+
+#: apps/users/api/auth/serializers.py:147
+msgid "Invalid token"
+msgstr "Неверный токен"
+
+#: apps/users/api/auth/serializers.py:157
+msgid "Passwords mismatch"
+msgstr "Пароли не совпадают"
+
+#: apps/users/api/auth/views.py:53
+msgid "Password reset e-mail has been sent."
+msgstr "Письмо для сброса пароля отправлено."
+
+#: apps/users/api/auth/views.py:74
+msgid "Password has been reset with the new password."
+msgstr "Пароль был сброшен на новый."
+
+#: apps/users/apps.py:9 apps/users/models/user.py:120
+msgid "Users"
+msgstr "Пользователи"
+
+#: apps/users/forms.py:12 apps/users/models/user.py:62
+#: templates/users/profile.html:105
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: apps/users/forms.py:20
+msgid "last_name"
+msgstr "Фамилия"
+
+#: apps/users/models/user.py:66
+msgid "First name"
+msgstr "Имя"
+
+#: apps/users/models/user.py:71
+msgid "Last name"
+msgstr "Фамилия"
+
+#: apps/users/models/user.py:76
+msgid "Email address"
+msgstr "Email адрес"
+
+#: apps/users/models/user.py:81
+msgid "Staff status"
+msgstr "Статус персонала"
+
+#: apps/users/models/user.py:84
+msgid "Designates whether the user can log into this admin site."
+msgstr "Определяет, может ли пользователь входить в административную часть."
+
+#: apps/users/models/user.py:88
+msgid "Active"
+msgstr "Активен"
+
+#: apps/users/models/user.py:91
+msgid "Designates whether this user should be treated as active."
+msgstr "Определяет, следует ли считать этого пользователя активным."
+
+#: apps/users/models/user.py:95
+msgid "Avatar"
+msgstr "Аватар"
+
+#: apps/users/notifications.py:14
+msgid "Password Reset"
+msgstr "Сброс пароля"
+
+#: apps/users/signals.py:17
+msgid "Top up"
+msgstr "Пополнение"
+
+#: apps/users/signals.py:18
+msgid "Write off"
+msgstr "Списание"
+
+#: apps/users/signals.py:25
+msgid "Business"
+msgstr "Бизнес"
+
+#: apps/users/signals.py:26
+msgid "Individual"
+msgstr "Личное"
+
+#: apps/users/signals.py:27
+msgid "Tax"
+msgstr "Налог"
+
+#: templates/base.html:25
+msgid "Sections"
+msgstr "Разделы"
+
+#: templates/base.html:42 templates/users/profile.html:6
+#: templates/users/profile.html:78
+msgid "Profile"
+msgstr "Профиль"
+
+#: templates/base.html:46
+msgid "Admin panel"
+msgstr "Панель администратора"
+
+#: templates/base.html:52
+msgid "Logout"
+msgstr "Выйти"
+
+#: templates/base.html:69
+msgid "Home page"
+msgstr "Главная страница"
+
+#: templates/base.html:74
+msgid "All transactions"
+msgstr "Все транзакции"
+
+#: templates/base.html:79
+msgid "Transactions settings"
+msgstr "Настройки транзакций"
+
+#: templates/base.html:92
+msgid "Error"
+msgstr "Ошибка"
+
+#: templates/finances/category/create.html:6
+#: templates/finances/category/create.html:15
+msgid "Create category for money flow"
+msgstr "Создать категорию для денежного потока"
+
+#: templates/finances/category/create.html:24
+#: templates/finances/category/update.html:24
+#: templates/finances/category_type/create.html:24
+#: templates/finances/category_type/update.html:24
+#: templates/finances/money_flow/create.html:24
+#: templates/finances/money_flow/update.html:24
+#: templates/finances/money_flow_status/create.html:24
+#: templates/finances/money_flow_status/update.html:24
+msgid "Save"
+msgstr "Сохранить"
+
+#: templates/finances/category/list.html:22
+msgid "Categories for money flow"
+msgstr "Категории для денежного потока"
+
+#: templates/finances/category/list.html:24
+#: templates/finances/category_type/list.html:24
+#: templates/finances/money_flow_status/list.html:24
+msgid "Add New"
+msgstr "Добавить"
+
+#: templates/finances/category/list.html:30
+msgid "No categories found. Add one to get started."
+msgstr "Категории не найдены. Добавьте первую, чтобы начать."
+
+#: templates/finances/category/list.html:44
+msgid "Parent:"
+msgstr "Родительская:"
+
+#: templates/finances/category/list.html:48
+msgid "Type:"
+msgstr "Тип:"
+
+#: templates/finances/category/list.html:52
+#: templates/finances/category_type/list.html:44
+#: templates/finances/money_flow/list.html:67
+#: templates/finances/money_flow_status/list.html:45
+msgid "Edit"
+msgstr "Редактировать"
+
+#: templates/finances/category/list.html:57
+#: templates/finances/category_type/list.html:49
+#: templates/finances/money_flow_status/list.html:50
+msgid "Remove"
+msgstr "Удалить"
+
+#: templates/finances/category/update.html:6
+#: templates/finances/category/update.html:15
+msgid "Update category"
+msgstr "Обновить категорию"
+
+#: templates/finances/category_type/list.html:6
+#: templates/finances/category_type/list.html:15
+msgid "Money Flow Types"
+msgstr "Типы денежных потоков"
+
+#: templates/finances/category_type/list.html:22
+msgid "Category types for money flow"
+msgstr "Типы категорий для денежного потока"
+
+#: templates/finances/category_type/list.html:30
+msgid "No money flow types available. Add your first type to get started."
+msgstr "Типы денежных потоков отсутствуют. Добавьте первый тип, чтобы начать."
+
+#: templates/finances/money_flow/create.html:6
+#: templates/finances/money_flow/create.html:15
+msgid "Create new transaction"
+msgstr "Создать новую транзакцию"
+
+#: templates/finances/money_flow/list.html:5
+#: templates/finances/money_flow/list.html:14
+msgid "Money Flows"
+msgstr "Денежные потоки"
+
+#: templates/finances/money_flow/list.html:21
+msgid "Financial Transactions"
+msgstr "Финансовые транзакции"
+
+#: templates/finances/money_flow/list.html:24
+msgid "Filters"
+msgstr "Фильтры"
+
+#: templates/finances/money_flow/list.html:27
+msgid "New Transaction"
+msgstr "Новая транзакция"
+
+#: templates/finances/money_flow/list.html:34
+msgid "No transactions found. Add your first transaction to get started."
+msgstr "Транзакции не найдены. Добавьте первую, чтобы начать."
+
+#: templates/finances/money_flow/list.html:72
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/finances/money_flow/list.html:90
+msgid "Filter Transactions"
+msgstr "Фильтровать транзакции"
+
+#: templates/finances/money_flow/list.html:107
+msgid "Category Type"
+msgstr "Тип категории"
+
+#: templates/finances/money_flow/list.html:123
+msgid "Reset"
+msgstr "Сбросить"
+
+#: templates/finances/money_flow/list.html:124
+msgid "Cancel"
+msgstr "Отмена"
+
+#: templates/finances/money_flow/list.html:125
+msgid "Apply Filters"
+msgstr "Применить фильтры"
+
+#: templates/finances/money_flow/list.html:148
+#: templates/finances/money_flow/list.html:156
+msgid "Choose type first"
+msgstr "Сначала выберите тип"
+
+#: templates/finances/money_flow/update.html:6
+#: templates/finances/money_flow/update.html:15
+msgid "Update transaction"
+msgstr "Обновить транзакцию"
+
+#: templates/finances/money_flow_status/create.html:6
+#: templates/finances/money_flow_status/create.html:15
+msgid "Create money flow type"
+msgstr "Создать тип денежного потока"
+
+#: templates/finances/money_flow_status/list.html:6
+#: templates/finances/money_flow_status/list.html:15
+#: templates/finances/money_flow_status/list.html:22
+msgid "Money Flow Statuses"
+msgstr "Статусы денежных потоков"
+
+#: templates/finances/money_flow_status/list.html:30
+msgid "No statuses found. Add one to get started."
+msgstr "Статусы не найдены. Добавьте первый, чтобы начать."
+
+#: templates/finances/money_flow_status/update.html:6
+#: templates/finances/money_flow_status/update.html:15
+msgid "Update money flow type"
+msgstr "Обновить тип денежного потока"
+
+#: templates/finances/settings.html:5 templates/finances/settings.html:9
+msgid "Finance Settings"
+msgstr "Финансовые настройки"
+
+#: templates/finances/settings.html:19
+msgid "Manage Finance Settings"
+msgstr "Управление финансовыми настройками"
+
+#: templates/finances/settings.html:27
+msgid "Transaction Types"
+msgstr "Типы транзакций"
+
+#: templates/finances/settings.html:30
+msgid "Transaction Statuses"
+msgstr "Статусы транзакций"
+
+#: templates/finances/settings.html:33
+msgid "Back to Home"
+msgstr "На главную"
+
+#: templates/index.html:5
+msgid "Financial Control"
+msgstr "Финансовый контроль"
+
+#: templates/index.html:11
+msgid "Welcome to Financial Control"
+msgstr "Добро пожаловать в Финансовый контроль"
+
+#: templates/index.html:13
+msgid "Manage your money flows and track transactions in one place"
+msgstr "Управляйте денежными потоками и отслеживайте транзакции в одном месте"
+
+#: templates/index.html:18
+msgid "View All Transactions"
+msgstr "Просмотреть все транзакции"
+
+#: templates/users/login.html:10 templates/users/login.html:31
+msgid "Login"
+msgstr "Вход"
+
+#: templates/users/login.html:23
+msgid "Login to Account"
+msgstr "Вход в аккаунт"
+
+#: templates/users/login.html:35
+msgid "Create New Account"
+msgstr "Создать новый аккаунт"
+
+#: templates/users/profile.html:88
+msgid "Info about user"
+msgstr "Информация о пользователе"
+
+#: templates/users/profile.html:107
+msgid "Created at"
+msgstr "Создан"
+
+#: templates/users/profile.html:119
+msgid "Upload new profile picture"
+msgstr "Загрузить новое фото профиля"
+
+#: templates/users/profile.html:126
+msgid "Choice file"
+msgstr "Выбрать файл"
+
+#: templates/users/profile.html:129
+msgid "Upload"
+msgstr "Загрузить"
+
+#: templates/users/signup.html:10
+msgid "Registration"
+msgstr "Регистрация"
+
+#: templates/users/signup.html:23
+msgid "Create Account"
+msgstr "Создать аккаунт"
+
+#: templates/users/signup.html:31
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: templates/users/signup.html:35
+msgid "Already have an account? Login"
+msgstr "Уже есть аккаунт? Войти"
+
+#: templates/users/update_user.html:6 templates/users/update_user.html:15
+msgid "Update personal info"
+msgstr "Обновить личную информацию"
+
+#: templates/users/update_user.html:26
+msgid "Back"
+msgstr "Назад"
+
+#, fuzzy
+#~| msgid "Personal info"
+#~ msgid "Personal"
+#~ msgstr "Персональная информация"

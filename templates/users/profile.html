@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Profile" %}{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="{% static 'users/css/profile.css' %}" />
+<style>
+.avatar-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.avatar-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+.avatar-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+    border-radius: 50%;
+}
+
+.avatar-container:hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.edit-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.avatar-container:hover .edit-icon {
+    opacity: 1;
+}
+
+</style>
+{% endblock %}
+
+{% block page_name %}
+<div class="w-100 d-flex justify-content-center">
+    <a class="navbar-brand mx-auto" href="#">{% trans "Profile" %}</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <div class="card options-container">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">{% trans "Info about user" %} {{ user.first_name }} {{ user.last_name }}</h5>
+                    <a href="{% url 'users:update_initials' %}" class="btn btn-warning">
+                        <i class="bi bi-pencil"></i>
+                    </a>
+                </div>
+                <div class="d-flex align-items-center p-3">
+                    <div class="avatar-container me-3">
+                        {% if user.avatar %}
+                            <img src="{{ user.avatar.url }}" alt="User avatar" class="avatar-image">
+                        {% else %}
+                            <img src="{% static 'empty_avatar.webp' %}" alt="Profile Photo" class="avatar-image" />
+                        {% endif %}
+                        <button type="button" class="avatar-button" data-bs-toggle="modal" data-bs-target="#avatarUploadModal">
+                            <i class="bi bi-pencil edit-icon"></i>
+                        </button>
+                    </div>
+                    <div class="user-info">
+                        <h6>{% trans "Username" %}: {{ user.username }}</h6>
+                        <h6>Email: {{ user.email | slice:1}}<span>*****</span>{{ user.email | slice:"-10:"}}</h6>
+                        <h6>{% trans "Created at" %}: {{ user.created|date:"d.m.Y" }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="avatarUploadModal" tabindex="-1" aria-labelledby="avatarUploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="avatarUploadModalLabel ">{% trans "Upload new profile picture" %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" enctype="multipart/form-data" action="{% url 'users:update_avatar' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="avatar" class="form-label">{% trans "Choice file" %}</label>
+                        <input type="file" class="form-control" id="avatar" name="avatar" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">{% trans "Upload" %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

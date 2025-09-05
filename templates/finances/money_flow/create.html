@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Create new transaction" %}{% endblock %}
+
+{% block style %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'products/css/create.css' %}" />
+{% endblock %}
+
+{% block page_name %}
+<div class="w-100 d-flex justify-content-center">
+    <a class="navbar-brand mx-auto" href="#">{% trans "Create new transaction" %}</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="content-container p-3">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-primary" type="submit">{% trans "Save" %}</button>
+    </form>
+</div>
+{% endblock %}

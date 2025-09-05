@@ -1,0 +1,21 @@
+# sqlite db instance
+**.sqlite3
+
+#__pycache__ files
+__pycache__/
+
+#python venv folder
+.venv
+venv
+
+#env file
+.env
+
+#django media files
+media/
+
+#compiled translation file
+django.mo
+
+#static directory (produced by manage.py collectstatic)
+static/

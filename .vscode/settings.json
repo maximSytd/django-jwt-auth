@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "dotenv",
+        "filterset",
+        "imagekit",
+        "imagekitmodels",
+        "ISSUSER",
+        "mptt",
+        "REFERER"
+    ],
+    "files.exclude": {
+       "**/__pycache__": true
+     },
+     "editor.rulers": [79]
+}
