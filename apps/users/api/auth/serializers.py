@@ -115,11 +115,11 @@ class JWTSerializer(OpenApiSerializer):
 
     access = serializers.CharField()
     access_expiry = serializers.IntegerField(
-        help_text=f"Token expires in {settings.JWT_SETTINGS["ACCESS_TTL"]}",
+        help_text=f"Token expires in {settings.JWT_SETTINGS['ACCESS_TTL']}",
     )
     refresh = serializers.CharField()
     refresh_expiry = serializers.IntegerField(
-        help_text=f"Token expires in {settings.JWT_SETTINGS["REFRESH_TTL"]}",
+        help_text=f"Token expires in {settings.JWT_SETTINGS['REFRESH_TTL']}",
     )
     user = UserSerializer()
 

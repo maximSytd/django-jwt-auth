@@ -130,7 +130,7 @@ class RefreshView(GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         """Exchange refresh token for new access and refresh."""
-        refresh_serializer = self.get_serializer(request.data)
+        refresh_serializer = self.get_serializer(data=request.data)
         refresh_serializer.is_valid(raise_exception=True)
         refresh_token = refresh_serializer.validated_data["token"]
         try:
