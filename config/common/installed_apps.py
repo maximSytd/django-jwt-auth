@@ -25,6 +25,7 @@ THIRD_PARTY = (
 LOCAL_APPS = (
     "apps.core",
     "apps.users",
+    "apps.books",
 )
 
 INSTALLED_APPS += THIRD_PARTY + LOCAL_APPS + DRF_PACKAGES

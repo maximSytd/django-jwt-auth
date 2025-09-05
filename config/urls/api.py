@@ -7,4 +7,5 @@ urlpatterns = [
     # API URLS
     path("users/", include("apps.users.api.urls")),
     path("auth/", include("apps.users.api.auth.urls")),
+    path("books/", include("apps.books.api.urls")),
 ]
