@@ -1,16 +1,7 @@
 # Test task:
-## Web service for managing cash flow
-funds (CFD)
+## Custom jwt authentication
 Description:
-CFD (cash flow) is the process of accounting, management and analysis.
-receipts and writing of funds of companies or individuals. Within the framework of
-This task, the user must be able to keep track of all cash
-operations taking into account
-
-### examples:
-![screenshot 1](docs/screenshots/screen1.png)
-
-![screenshot 2](docs/screenshots/screen2.png)
+It is necessary to implement a backend application — its own authentication and authorization system. The application should not be completely based on the corresponding out-of-the-box frameworks.
 
 ## 🚀 Project Setup Guide (local)
 
@@ -27,18 +18,9 @@ This guide will help you set up and run the Django project using the [uv](https:
 
 ### 1. clone repo and get dependencies
 ```bash
-git clone https://github.com/maximSytd/django-cash-flow.git
-cd django-cash-flow
-uv sync
-```
-
-### 2. activate virtual environment
-```bash
-# Windows:
-.venv/Scripts/activate
-
-# Unix/macOS:
-source .venv/bin/activate
+git clone https://github.com/maximSytd/django-jwt-auth.git
+cd django-jwt-auth
+uv sync --active
 ```
 
 
@@ -84,3 +66,5 @@ django-admin compilemessages
 python manage.py runserver
 ```
 Then open http://localhost:8000 in your browser
+
+http://127.0.0.1:8000/api/v1/open-api/ui/ open api interface
