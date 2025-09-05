@@ -33,7 +33,7 @@ class JWTAuthentication(BaseAuthentication):
         Raises `AuthenticationFailed` if credentials are invalid.
         """
         auth = get_authorization_header(request).split()
-        if not auth or auth[0].lower != self.keyword.lower():
+        if not auth or auth[0].lower() != self.keyword.lower():
             return None
         self.validate_auth_header(auth)
         token = self.get_token_from_header(auth)
@@ -62,11 +62,11 @@ class JWTAuthentication(BaseAuthentication):
             raise AuthenticationFailed(USER_NOT_FOUND_MESSAGE)
         return user, token
 
-    def validate_auth_header(header: bytearray) -> None:
+    def validate_auth_header(self, header: bytearray) -> None:
         """Return None and Validate header or raise exception if it invalid."""
         if len(header) != VALID_AUTH_HEADER_LEN:
             raise AuthenticationFailed(INVALID_AUTH_HEADER_MESSAGE)
 
-    def get_token_from_header(header: bytearray) -> str:
+    def get_token_from_header(self, header: bytearray) -> str:
         """Return decoded token from header."""
         return header[1].decode("utf-8")
