@@ -65,6 +65,5 @@ django-admin compilemessages
 ```bash
 python manage.py runserver
 ```
-Then open http://localhost:8000 in your browser
 
-http://127.0.0.1:8000/api/v1/open-api/ui/ open api interface
+Then open http://127.0.0.1:8000/api/v1/open-api/ui/ open api interface
